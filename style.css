@@ -1,0 +1,447 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+/* 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #342b43;
+  background: #faf7fc;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, p {
+  overflow-wrap: break-word;
+}
+
+/* 상단 메뉴 */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 8%;
+  background: rgba(250, 247, 252, 0.96);
+  box-shadow: 0 2px 12px rgba(60, 40, 80, 0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #654b80;
+  white-space: nowrap;
+}
+
+.logo span {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 13px;
+  color: #5c5268;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #9b72bc;
+}
+
+/* 첫 화면 */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 10%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(34, 24, 55, 0.83),
+      rgba(89, 64, 115, 0.18)
+    ),
+    url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85')
+    center / cover no-repeat;
+  color: white;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #a88bc3;
+}
+
+.hero .eyebrow {
+  color: #ead7f5;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -2px;
+}
+
+.hero-description {
+  font-size: 19px;
+  line-height: 2;
+  color: #f3eaf7;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 34px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background: white;
+  color: #5e4777;
+}
+
+/* 공통 섹션 */
+.section {
+  padding: 110px 9%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.section-description {
+  color: #777080;
+  line-height: 2;
+  font-size: 15px;
+}
+
+/* 틈 · 빛 · 쉼 */
+.about {
+  background: #faf7fc;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  max-width: 1100px;
+  margin: 65px auto 0;
+}
+
+.philosophy-card {
+  padding: 20px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(80, 50, 100, 0.12);
+}
+
+.circle span {
+  font-size: 43px;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0 2px 10px rgba(40, 20, 60, 0.25);
+}
+
+.circle-one {
+  background: linear-gradient(145deg, #bba4d1, #e6d4ee);
+}
+
+.circle-two {
+  background: linear-gradient(145deg, #d9b5d7, #f7dcb9);
+}
+
+.circle-three {
+  background: linear-gradient(145deg, #9884c1, #d9c8ed);
+}
+
+.philosophy-card h3 {
+  color: #684c86;
+  font-size: 22px;
+}
+
+.philosophy-card p {
+  font-size: 14px;
+  color: #80778a;
+  line-height: 1.9;
+}
+
+/* 우리가 하는 일 */
+.work {
+  background: #eee7f4;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 55px auto 0;
+}
+
+.work-card {
+  overflow: hidden;
+  border-radius: 20px;
+  background: white;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(60, 40, 80, 0.07);
+}
+
+.work-image {
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-story {
+  background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80');
+}
+
+.image-creative {
+  background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80');
+}
+
+.image-tech {
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80');
+}
+
+.work-text {
+  padding: 30px;
+}
+
+.work-text span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #a084ba;
+}
+
+.work-text h3 {
+  margin-top: 20px;
+  font-size: 23px;
+}
+
+.work-text p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #81798b;
+}
+
+/* 1인 가구 */
+.focus {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59, 40, 83, 0.94),
+      rgba(142, 103, 171, 0.88)
+    );
+  color: white;
+}
+
+.focus-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.focus .eyebrow {
+  color: #e6d1f4;
+}
+
+.focus h2 {
+  font-size: clamp(32px, 4vw, 52px);
+}
+
+.focus-content > p:last-child {
+  line-height: 2.3;
+  color: #f0e7f5;
+}
+
+/* 프로젝트 */
+.projects {
+  background: #faf7fc;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1150px;
+  margin: 55px auto 0;
+}
+
+.project-card {
+  min-height: 240px;
+  padding: 40px 28px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 30px rgba(70, 50, 90, 0.07);
+  text-align: left;
+}
+
+.project-card span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #a084ba;
+}
+
+.project-card h3 {
+  margin-top: 35px;
+  font-size: 21px;
+  color: #604779;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #80778a;
+}
+
+/* 마지막 메시지 */
+.ending {
+  background: linear-gradient(135deg, #c4addb, #8d70ae);
+  color: white;
+}
+
+.ending .eyebrow {
+  color: #f3e7fc;
+}
+
+.ending > p:not(.eyebrow) {
+  color: #f3e7fc;
+  letter-spacing: 2px;
+}
+
+/* 하단 */
+footer {
+  padding: 50px 20px;
+  text-align: center;
+  background: #332844;
+  color: white;
+}
+
+footer h3 {
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+footer p {
+  color: #c9bcd6;
+}
+
+footer small {
+  color: #a99ab9;
+  font-size: 11px;
+}
+
+/* 태블릿 */
+@media (max-width: 900px) {
+  .work-grid,
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .philosophy-grid {
+    gap: 15px;
+  }
+
+  .circle {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 18px 15px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 80px 7%;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 75px 6%;
+  }
+
+  .philosophy-grid,
+  .work-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .circle {
+    width: 190px;
+    height: 190px;
+  }
+
+  .work-card,
+  .project-card {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .focus-content > p:last-child {
+    font-size: 14px;
+  }
+}
