@@ -1279,3 +1279,101 @@ nav a:hover {
   .ongi-founder-copy>p:not(.eyebrow) { font-size:14px; }
 }
 
+/* =====================================
+   ONGI 대표 소개 - 상단 텍스트형 디자인
+===================================== */
+
+.ongi-founder {
+  background: linear-gradient(
+    135deg,
+    #f9f5fc,
+    #ffffff
+  );
+
+  padding: 110px 0;
+}
+
+/* 사진 없이 한 칸으로 표시 */
+.ongi-founder .ongi-founder-grid {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 대표 소개 본문 */
+.ongi-founder-copy {
+  text-align: center;
+}
+
+/* 대표 소개 제목 */
+.ongi-founder-copy h2 {
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: 600;
+  color: #4d3565;
+  margin-bottom: 25px;
+}
+
+/* 대표 직함 */
+.ongi-founder-position {
+  color: #805e9e !important;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.ongi-founder-position span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* 본문 글 */
+.ongi-founder-copy > p:not(.eyebrow) {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  line-height: 2.1;
+  color: #706678;
+}
+
+/* 주요 활동 태그 */
+.ongi-founder-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.ongi-founder-tags span {
+  padding: 10px 17px;
+  background: white;
+  border: 1px solid #e3d6ea;
+  border-radius: 30px;
+  font-size: 13px;
+  color: #725488;
+}
+
+/* 모바일 */
+@media (max-width: 700px) {
+
+  .ongi-founder {
+    padding: 75px 0;
+  }
+
+  .ongi-founder-copy > p:not(.eyebrow) {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .ongi-founder-tags {
+    gap: 8px;
+  }
+
+  .ongi-founder-tags span {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+
+}
