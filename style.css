@@ -1241,3 +1241,41 @@ nav a:hover {
   }
 }
 
+/* ONGI COMPANY: 프로젝트·대표 소개 개편 */
+.ongi-projects { background: #faf7fc; }
+.ongi-project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.ongi-project { display:flex; flex-direction:column; overflow:hidden; border:1px solid #e7ddeb; border-radius:24px; background:#fff; box-shadow:0 12px 35px rgba(65,43,90,.07); }
+.ongi-video { aspect-ratio:16 / 9; background:#30243c; }
+.ongi-video iframe { display:block; width:100%; height:100%; border:0; }
+.ongi-project-body { padding:30px; flex:1; }
+.ongi-project-body h3 { margin:18px 0 12px; color:#503866; font-size:26px; }
+.ongi-project-body p { color:#766b7e; font-size:14px; line-height:1.95; }
+.ongi-project-link { display:inline-block; color:#78559a; margin-top:14px; padding-bottom:4px; border-bottom:1px solid #bda7cb; font-weight:700; text-decoration:none; }
+.ongi-project-link:hover,.ongi-project-link:focus-visible { color:#4d346c; }
+.ongi-caption { color:#9689a0!important; font-size:12px!important; }
+.ongi-app-preview { min-height:263px; padding:30px; display:flex; flex-direction:column; justify-content:center; background:linear-gradient(135deg,#e8dbee,#f5eef6 58%,#e6d3e6); color:#513b67; }
+.ongi-app-eyebrow { font-size:11px; font-weight:700; letter-spacing:1.4px; opacity:.8; }
+.ongi-ingredient-row { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0 14px; }
+.ongi-ingredient-row span { padding:8px 11px; font-size:13px; border-radius:999px; border:1px solid #decde4; background:rgba(255,255,255,.85); }
+.ongi-app-preview strong { font-size:30px; }
+.ongi-app-preview p { color:#806a8f; font-size:13px; margin:9px 0 0; }
+.ongi-founder { background:linear-gradient(130deg,#fff,#faf5fc); }
+.ongi-founder-grid { display:grid; grid-template-columns:minmax(220px,.8fr) minmax(0,1.3fr); align-items:center; gap:clamp(36px,7vw,100px); }
+.ongi-founder-photo { width:min(100%,410px); margin:0 auto; padding:12px; border:1px solid #e6d8ec; border-radius:28px; background:#f1e8f5; }
+.ongi-founder-photo img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:21px; }
+.ongi-founder-photo span { display:block; padding:15px 0 5px; text-align:center; font-size:10px; letter-spacing:1.6px; font-weight:700; color:#937ba8; }
+.ongi-founder-copy h2 { margin-bottom:16px; }
+.ongi-founder-copy>p:not(.eyebrow) { color:#706678; font-size:15px; line-height:2; }
+.ongi-founder-position { color:#795991!important; font-weight:600; }
+.ongi-founder-tags { display:flex; flex-wrap:wrap; gap:9px; margin-top:28px; }
+.ongi-founder-tags span { padding:8px 12px; background:#fff; border:1px solid #e3d7ea; border-radius:999px; color:#735987; font-size:12px; }
+@media(max-width:850px) {
+  .ongi-project-grid,.ongi-founder-grid { grid-template-columns:1fr; }
+  .ongi-founder-photo { max-width:360px; }
+}
+@media(max-width:700px) {
+  .ongi-project-body { padding:24px; }
+  .ongi-app-preview { min-height:215px; padding:25px; }
+  .ongi-founder-copy>p:not(.eyebrow) { font-size:14px; }
+}
+
